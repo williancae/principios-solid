@@ -13,8 +13,8 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo "Removing node_modules"
-      - rm -rf node_modules/
+      - echo "Done building the app"
+
 artifacts:
   base-directory: dist
   files:
