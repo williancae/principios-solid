@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - echo "Installing dependencies"
+      - npm install
+  build:
+    commands:
+      - echo "Building the app"
+      - npm run build
+  post_build:
+    commands:
+      - echo "Removing node_modules"
+      - rm -rf node_modules/
+artifacts:
+  base-directory: '.'
+  files:
+    - '**/*'
