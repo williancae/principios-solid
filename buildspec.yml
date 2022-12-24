@@ -4,10 +4,8 @@ phases:
   pre_build:
     commands:
       - echo "Installing dependencies"
-      - rm -rf node_modules
-      - rm package-lock.json
       - npm cache clean --force
-      - npm install
+      - npm install --no-audit
   build:
     commands:
       - echo "Building the app"
